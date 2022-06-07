@@ -42,7 +42,7 @@ return [
     */
 
     'models' => [
-       // 'namespace' => 'App\\Models\\',
+       'namespace' => 'App\\Models\\',
     ],
 
     /*
@@ -180,6 +180,7 @@ return [
     | Here you change some of the Voyager UI settings.
     |
     */
+
 
     'primary_color' => '#22A7F0',
 
