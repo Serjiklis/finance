@@ -31,4 +31,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'nasdaq' => [
+      'url' => env('NASDAQ_API_URL', 'https://data.nasdaq.com/api/v3/'),
+      'key' => env('NASDAQ_API_KEY'),
+    ],
+
 ];
