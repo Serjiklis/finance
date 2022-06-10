@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Service;
 use Illuminate\Support\Facades\Http;
 
 /**
@@ -26,9 +26,8 @@ class NasdaqService
     $solars = $this->callApi();
     foreach ($solars['data'] as $solar) {
       dump($solar[0]);
+      dump($solar[1]);
     }
-
-
-
+    
   }
 }

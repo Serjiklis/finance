@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\NasdaqService;
+use App\Service\NasdaqService;
 
 class nasdaq extends Command
 {
@@ -29,7 +29,7 @@ class nasdaq extends Command
     public function handle()
     {
         $this->argument('id');
-        //(new NasdaqService)->callApi()->getDataApi();
+        
         (new NasdaqService)->getDataApi();
     }
 }

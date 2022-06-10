@@ -36,4 +36,8 @@ return [
       'key' => env('NASDAQ_API_KEY'),
     ],
 
+    'polygon' => [
+      'url' => env('POLYGON_API_URL', 'https://api.polygon.io/v2/'),
+      'key' => env('POLYGON_API_KEY'),
+    ],
 ];
