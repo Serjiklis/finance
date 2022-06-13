@@ -3,6 +3,7 @@
 namespace App\Service;
 use Illuminate\Support\Facades\Http;
 use App\Models\Article;
+use App\Jobs\GetNewsJob;
 
 
 /**
@@ -41,6 +42,7 @@ class PolygonService
             'description' => $news['description'],
             'published_utc' => $news['published_utc'],
           ]);
+          GetNewsJob::dispatch($article);
         }else {
           continue;
         }
