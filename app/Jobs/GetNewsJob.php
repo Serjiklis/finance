@@ -10,6 +10,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use App\Models\Article;
 use App\Service\PolygonService;
+use App\Console\Commands\polygon;
 
 class GetNewsJob implements ShouldQueue
 {
@@ -33,6 +34,9 @@ class GetNewsJob implements ShouldQueue
      */
     public function handle()
     {
-        (new PolygonService())->getNews($ticker=NULL, $limit=30);
+        $value = new polygon;
+        $limit = $value->handle()->limit;
+        $ticker = $value->handle()->ticker;
+        (new PolygonService())->getNews($ticker=NULL, $limit);
     }
 }
