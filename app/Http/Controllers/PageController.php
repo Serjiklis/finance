@@ -15,4 +15,9 @@ class PageController extends Controller
       //dd($article);
       return view('welcome', compact('articles'));
     }
+
+    public function uploadForm(Request $request)
+    {
+      dd($request->all());
+    }
 }

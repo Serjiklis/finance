@@ -18,3 +18,8 @@ Route::get('/', [PageController::class, 'welcome']);
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/mid', function () {
+    return view('mid');
+});
+Route::post('/form', [PageController::class, 'uploadForm'])->middleware('my');
